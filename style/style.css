@@ -1,0 +1,215 @@
+/* CONFIGURACION GENERAL*/
+
+:root {
+  --borderradius: .5em;
+  --shadowcolor:rgba(0, 89, 255, 0.75);
+  --buttoncolor:rgb(0, 162, 255);
+  --font-roboto: 'Roboto Slab',sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Raleway', 'Roboto Slab',sans-serif;
+  padding: 1rem;
+  background-image: url(https://images.unsplash.com/photo-1542435503-956c469947f6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+#main-container {
+  position: relative;
+  background-color: rgba(84, 65, 252, 0.25);
+  width: 50%;
+  height: auto;
+  padding: 2rem 2rem;
+  margin: auto;
+  border-radius: var(--borderradius);
+}
+
+/* HEADER */
+
+#header {
+  background-color: rgba(4, 120, 197, 0.61);
+  border-radius: 1em 1em 0 0;
+  padding: 0.2em 0.2em;
+  text-align: center;
+}
+
+#title {
+  font-weight: 800;
+  font-size: 3.3rem;
+}
+
+#description{
+  font-family: var(--font-roboto);
+  font-size: 2.3rem;
+}
+
+#title, #description{
+  color: rgb(231, 245, 214);
+  padding: 10px;
+}
+
+/* FORM */
+
+#survey-form {
+  font-family: var(--font-roboto);
+  background-color:rgba(25, 0, 255, 0.5);
+  margin-top: 0;
+  padding: 1em 1em;
+  border-radius: 0 0 1em 1em;
+}
+
+
+#inputs{
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-rows: auto;
+}
+
+#div-name, #div-email, #div-number, #select-dropdown{
+  padding: 0.2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#name-label, #email-label, #number-label, 
+#dropdown-label, #textarea-label{
+  font-size: inherit;
+  padding: 0.3em;
+  margin: 0.3rem;
+  margin-left: 1rem;
+  align-self: start;
+}
+#name, #email, #number, #dropdown, #textarea{
+  font-family: var(--font-roboto);
+  font-size: 1.2rem;
+  border-radius: var(--borderradius);
+  border-width: 0;
+  border-color: transparent;
+  box-shadow: 3px 3px 3px 1.5px rgba(120, 204, 253, 0.9) inset;
+  padding: 0.3em;
+  margin: 0.3rem;
+  width: 95%;
+  outline: none;
+}
+
+/* RADIO Y CHECKBOX */
+
+p{
+  font-size: inherit;
+  margin-bottom: 0.3rem;
+  margin-left: 1.5rem;
+  margin-top: 0.3rem;
+}
+
+.options{
+  display: flex;
+  align-items: flex-start;
+  margin: 0.5em 0.5em 0.5em 1rem;
+}
+
+#radio-1, #radio-2,#radio-3,#radio-4,
+#checkbox1, #checkbox2, #checkbox3, #checkbox4,
+#checkbox5, #checkbox6, #checkbox7 {
+  display: inline-block;
+  width: 3em;
+  height: 2em;
+  margin-right:1rem;
+}
+/* TEXTAREA */
+.div-textarea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.div-textarea #textarea-label {
+  align-self: start;
+}
+#textarea{
+  margin: auto;
+  width: 95%;
+  height: 10rem;
+  resize: none;
+}
+
+/* SUBMIT */
+#submit{
+  margin: 10px auto auto;
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem 0.5rem;
+  font-size: 1.5rem;
+  border: transparent;
+  border-radius: var(--borderradius) ;
+  background-color: var(--buttoncolor);
+  box-shadow: 3px 3px 3px 1.5px var(--shadowcolor) inset;
+
+}
+#submit:hover{
+  background-color: var(--shadowcolor);
+  box-shadow: 3px 3px 3px 1.5px var(--buttoncolor) inset;  
+  font-weight: 700;
+  color: rgb(250, 154, 64);
+}
+/* **************
+  MEDIAS QUERIES
+  ************* */
+@media (max-width:1210px){
+  #main-container {
+    width: 70%;
+  }
+  
+}
+
+@media (max-width:870px){
+  #main-container {
+    width: 80%;
+    height: auto;
+  }
+  body {
+    font-size: 0.85rem;
+  }
+  #title{
+    font-size: 1.75rem;
+  }
+  
+  #description{
+    font-size: 1.25rem;
+  }
+     /* FORM */
+  
+  #name-label, #email-label, #number-label, 
+  #dropdown-label, #textarea-label{
+    font-size: inherit;
+  }
+  #name, #email, #number, #dropdown, #textarea{
+    font-size: 0.7rem;
+  }
+    /* RADIO Y CHECKBOX */
+  p{
+    font-size: inherit;
+  }
+  #radio-1, #radio-2,#radio-3,#radio-4,
+#checkbox1, #checkbox2, #checkbox3, #checkbox4,
+#checkbox5, #checkbox6, #checkbox7 {
+  width: 1.5em;
+  height: 1em;
+  margin-right:0.5rem;
+}
+    
+  /* SUBMIT */
+  #submit{
+    font-size: 0.85rem;
+  }
+}

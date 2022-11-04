@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>MS Formulario de Encuesta</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./style/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,600;0,700;0,800;1,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+    <div id="main-container">
+      
+      <header id="header">
+        <h1 id="title">SeJu Formulario de Encuesta </h1>
+        <p id="description">Tu opinión nos importa!</p>
+      </header>
+    
+      <main>
+        <form id="survey-form" action="">
+          <div id="inputs">
+            <div id="div-name">
+              <label for="name" id="name-label">Nombre:</label>
+              <input type="text" id="name" name="name" placeholder="Ingrese su Nombre..." required>
+            </div>
+
+            <div id="div-email">
+              <label for="email" id="email-label">Email:</label>
+              <input type="email" id="email" name="email" placeholder="Ingrese su Email..." required>
+            </div>
+
+            <div id="div-number">
+              <label for="number" id="number-label">Edad:</label>
+              <input type="number" id="number" name="number" min="10" max="100" placeholder="Ingrese su Edad:" required>
+            </div>
+          </div>
+
+          <div id="select-dropdown">
+            <label for="dropdown" id="dropdown-label">
+              Cual es el Lenguaje que estás aprendiendo ?
+            </label>
+            <select name="dropdown" id="dropdown" required>
+              <option value="emty" disabled selected>Seleccione una opción...</option> 
+              <option value="HTML5" >HTML5</option> 
+              <option value="CSS 3" >CSS 3</option>
+              <option value="JavaScript" >JavaScript</option>
+              <option value="Python" >Python</option>
+              <option value="PHP" >PHP</option>
+            </select>
+          </div>
+
+          <div>
+            <p>Que nivel de estudios cursas actualmente ?</p>
+            <label for="radio-1" class="options">
+              <input id="radio-1" type="radio" class="radio" name="radio" value="Primaria">Primaria</input>
+            </label>
+            <label for="radio-2" class="options">
+              <input id="radio-2" type="radio" class="radio" name="radio" value="Secundaria">Secundaria</input>
+            </label>
+            <label for="radio-3" class="options">
+              <input id="radio-3" type="radio" class="radio" name="radio" value="Terciario">Terciario</input>
+            </label>  
+            <label for="radio-4" class="options">
+              <input id="radio-4" type="radio" class="radio" name="radio" value="Universitaria">Universitaria</input>
+            </label>
+          </div>
+
+          <div>
+            <p>Que días de la semana estudias ?</p>
+            <label for="checkbox1" class="options">
+              <input id="checkbox1" type="checkbox" class="checkbox" name="checkbox" value="Lunes">Lunes</input>
+            </label>  
+            <label for="checkbox2" class="options">
+              <input id="checkbox2" type="checkbox" class="checkbox" name="checkbox" value="Martes">Martes</input>
+            </label>  
+            <label for="checkbox3" class="options">
+              <input id="checkbox3" type="checkbox" class="checkbox" name="checkbox" value="Miercoles">Miércoles</input>
+            </label>  
+            <label for="checkbox4" class="options">
+              <input id="checkbox4" type="checkbox" class="checkbox" name="checkbox" value="Jueves">Jueves</input>
+            </label>
+            <label for="checkbox5" class="options">
+              <input id="checkbox5" type="checkbox" class="checkbox" name="checkbox" value="Viernes">Viernes</input>
+            </label>
+            <label for="checkbox6" class="options">
+              <input id="checkbox6" type="checkbox" class="checkbox" name="checkbox" value="Sabado">Sábado</input>
+            </label>
+            <label for="checkbox7" class="options">
+              <input id="checkbox7" type="checkbox" class="checkbox" name="checkbox" value="Domingo">Domingo</input>
+            </label>
+          </div>
+
+          <div class="div-textarea">
+            <label id="textarea-label">Dejanos tus sugerencias e inquietudes</label>
+            <textarea name="textarea" id="textarea" maxlength="400" placeholder="ingresa aquí tus sugerencias"></textarea>
+          </div>
+          
+          <div>
+            <button type="submit" id="submit">Enviar!</button>
+          </div>
+        </form>
+      </main>
+    </div>
+  </body>
+</html>
+
+<!--
+
+  <div id="main-container">
+    <header id="header">
+      <h1 id="title">SeJu Formulario de Encuesta</h1>
+      <p id="description">Tu opinion nos importa!</p>
+    </header>
+  
+    <main>
+      <form id="survey-form" action="">
+        <div id="div-name">
+          <label for="name" id="name-label">Name:</label>
+          <input type="text" id="name" name="name" placeholder="Ingrese su Nombre..." required>
+        </div>
+
+        <div id="div-email">
+          <label for="email" id="email-label">Email:</label>
+          <input type="email" id="email" name="email" placeholder="Ingrese su Email..." required>
+        </div>
+
+        <div id="div-number">
+          <label for="number" id="number-label">Edad:</label>
+          <input type="number" id="number" name="number" min="10" max="100" placeholder="Ingrese su Edad:" required>
+        </div>
+
+        <div>
+          <p>Cual es el Lenguaje que estas aprendiendo:</p>
+          <label for="dropdown" id="dropdown-label">
+          <select name="dropdown" id="dropdown" >
+            <option value="emty" ></option> 
+            <option value="HTML5" >HTML5</option> 
+            <option value="CSS 3" >CSS 3</option>
+            <option value="JavaScript" >JavaScript</option>
+            <option value="Python" >Python</option>
+            <option value="PHP" >PHP</option>
+          </select>
+        </label>
+        </div>
+
+        <div>
+          <p>Que nivel de estudios cursas actualmente</p>
+          <label for="radio" class="options">
+            <input id="radio" type="radio" class="radio" name="radio" value="Primaria">Primaria</input>
+          </label>
+          <label for for="radio" class="options">
+            <input id="radio" type="radio" class="radio" name="radio" value="Secundaria">Secundaria</input>
+          </label>
+          <label for="radio" class="options">
+            <input id="radio" type="radio" class="radio" name="radio" value="Terciario">Terciario</input>
+          </label>  
+          <label for="radio" class="options">
+            <input id="radio" type="radio" class="radio" name="radio" value="Universitaria">Universitaria</input>
+          </label>
+        </div>
+
+        <div>
+          <p>Que dias de la semana estudias</p>
+          <label for="checkbox" class="options">
+            <input id="checkbox" type="checkbox" class="checkbox" name="checkbox" value="Lunes">Lunes</input>
+          </label>  
+          <label for="checkbox" class="options">
+            <input id="checkbox" type="checkbox" class="checkbox" name="checkbox" value="Martes">Martes</input>
+          </label>  
+          <label for="checkbox" class="options">
+            <input id="checkbox" type="checkbox" class="checkbox" name="checkbox" value="Miercoles">Miercoles</input>
+          </label>  
+          <label for="checkbox" class="options">
+            <input id="checkbox" type="checkbox" class="checkbox" name="checkbox" value="Jueves">Jueves</input>
+          </label>
+          <label for="checkbox" class="options">
+            <input id="checkbox" type="checkbox" class="checkbox" name="checkbox" value="Viernes">Viernes</input>
+          </label>
+          <label for="checkbox" class="options">
+            <input id="checkbox" type="checkbox" class="checkbox" name="checkbox" value="Sabado">Sabado</input>
+          </label>
+          <label for="checkbox" class="options">
+            <input id="checkbox" type="checkbox" class="checkbox" name="checkbox" value="Domingo">Domingo</input>
+          </label>
+        </div>
+
+        <div>
+          <p>Dejanos tus sugerencias e inquietudes</p>
+          <textarea name="" id="" cols="50" rows="10" placeholder="Dejanos tu comentario...">
+          </textarea>
+        </div>
+        
+        <div>
+          <button type="submit" id="submit">Enviar</button>
+        </div>
+      </form>
+    </main>
+  </div>
+
+-->
